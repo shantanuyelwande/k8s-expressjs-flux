@@ -8,10 +8,11 @@ metadata:
     filter.fluxcd.io/chart-image: semver:~0.3
 spec:
   chart:
-    repository: https://alexellis.github.io/expressjs-k8s/
-    name: expressjs-k8s
-    version: 0.1.1
+  chart:
+    git: https://github.com/shantanuyelwande/expressjs-k8s
+    path: chart/expressjs-k8s
+    ref: master
   values:
     ingress:
       enabled: false
-    image: alexellis2/service:0.3.7
+    image: shantanuy/expressjs-k8s-service:0.0.1
